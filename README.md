@@ -15,7 +15,24 @@ This script makes use of the Default File Geodatabase in ArcMap to save working 
 
 It is helpful if all the layers needed for the tool (apart from raster factors) are added to the Map Document before running the script. 
 
-## Setup
+## Setup & Demo Data
+
+There is some demonstration data so you can test out the Toolbox on your computer. 
+
+- Download the [MOPST Python Toolbox](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/MOPST-ArcGIS-Python-Toolbox.pyt). Save this somewhere on your machine you can find it (e.g. Downloads). 
+- Download the [`demo.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/demo.zip) file and extract it. This contains all the files you need to run the Toolbox. 
+- Open the `demo.mxd` file. 
+- Set the Default Geodatabase (File > Map Document Properties). 
+- Open the **Catalog** tab. 
+- **Connect To Folder** to the folder you downloaded the files. 
+- Open **MOPST-ArcGIS-Python-Toolbox.pyt** and double click **MOPST Model**. 
+- Set the input files, (like this image)[demo-MOPST-tool-inputs.png]
+- Click **OK** to run the model.
+- Wait for model to run *(about 5 minutes or so)*. 
+- Check output log (sample in `demo.zip`). 
+- Look at model outputs in the default geodatabase (sample in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip)). 
+
+For more details, please look at the [Demonstration Files](demo.md) page. 
 
 
 
@@ -28,14 +45,14 @@ This toolbox makes use of a range of input files. The files in (demo) are in thi
 
 Name (Format) | Example Filename | Description
 -- | -- | -- 
-Land Cover (Shapefile) | - | Shapefile of the different land cover types. 
-Land Cover Sensitivity (CSV File) | - | Sensitivity score for each land cover type.
-Seasonality Score (CSV File) | - | Contains information on which land cover types are more sensitive in summer or winter. 
-Pressure Raster Layer (Raster TIF) | - | Identify the stakeholder identification of areas of tourism pressure. 
-Opportunity Raster Layer (Raster TIF) | - | identify the stakeholder identification of areas of tourism opportunity. 
-Factor Weights (CSV File) | - | Lists all of the Factor Raster Layers and the weights given to them for Pressure and Opportunity.
-Scenario Weights (CSV File) | - | lists the three scenarios (Profit, Business as usual, Custodianship) and their weights. 
-Factor Raster Layers (Raster TIF) | - | show the presence (**1**) or absence (**0**) of a range of factors. 
+Land Cover (Shapefile) | *brighton-lewes-down-land-cover.shp* | Shapefile of the different land cover types. 
+Land Cover Sensitivity (CSV File) | *land-cover-sensitivity.csv* | Sensitivity score for each land cover type.
+Seasonality Score (CSV File) | seasonality.csv | Contains information on which land cover types are more sensitive in summer or winter. 
+Pressure Raster Layer (Raster TIF) | *bldbr-pressures-merged.tif* | Identify the stakeholder identification of areas of tourism pressure. 
+Opportunity Raster Layer (Raster TIF) | *bldbr-opportunity-merged.tif* | identify the stakeholder identification of areas of tourism opportunity. 
+Factor Weights (CSV File) | *seasonality.csv* | Lists all of the Factor Raster Layers and the weights given to them for Pressure and Opportunity.
+Scenario Weights (CSV File) | *scenario-weights.csv* | lists the three scenarios (Profit, Business as usual, Custodianship) and their weights. 
+Factor Raster Layers (Raster TIF) | *factor-rasters* | show the presence (**1**) or absence (**0**) of a range of factors. 
 
 
 ## Output Files:
@@ -68,3 +85,5 @@ profit_pressure_raster_winter | Output file | Winter Pressure file for profit sc
 seasonality_score_CSV | Working file | 
 summer_landcover_raster | Working file | 
 winter_landcover_raster | Working file | 
+
+They are available in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip). 

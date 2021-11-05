@@ -2,3 +2,6 @@
 MOPST-ArcGIS-Python-Toolbox.pyt.xml
 MOPST-ArcGIS-Python-Toolbox.MOPSTModel.pyt.xml
 MOPST-ArcGIS-Python-Toolbox.BCHTModel.pyt.xml
+demo-output/
+demo/
+
