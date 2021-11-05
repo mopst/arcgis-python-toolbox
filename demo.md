@@ -12,7 +12,7 @@ This has been tested on ArcMap 10.5 and should work on later versions of ArcMap 
 
 This video shows how to use the tool and the demo files. Step-by-step instructions are below. 
 
-[<iframe width="560" height="315" src="https://www.youtube.com/embed/U4L16ksAge4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U4L16ksAge4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Step by step instructions
 
