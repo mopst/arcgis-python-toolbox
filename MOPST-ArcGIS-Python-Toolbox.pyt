@@ -1,4 +1,4 @@
-## Version: 0.1.1
+## Version: 1.0.0
 ## Versioning approach based on Semantic Versioning https://semver.org/ with adaptions as suggested here: https://softwareengineering.stackexchange.com/questions/200002/semantic-versioning-for-desktop-applications/357887#357887
 ## i.e. MAJOR.MINOR.PATCH
 ## MAJOR major changes to interface / installation process
