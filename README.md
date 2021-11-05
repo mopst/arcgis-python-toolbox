@@ -21,7 +21,7 @@ It is helpful if all the layers needed for the tool (apart from raster factors) 
 
 ## Input File Specification
 
-This toolbox makes use of a range of input files. The files in (demo) are in this required format. The requirements are summarised below. See (input-file-specification)[input-file-specification.md] for more details. 
+This toolbox makes use of a range of input files. The files in (demo) are in this required format. The requirements are summarised below. See [input-file-specification](input-file-specification.md) for more details. 
 
 - All files must cover the same geographic areas
 - All files must be in the same coordinate system 
