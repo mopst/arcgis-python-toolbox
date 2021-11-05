@@ -1,4 +1,4 @@
-## Version: 0.1.0
+## Version: 0.1.1
 ## Versioning approach based on Semantic Versioning https://semver.org/ with adaptions as suggested here: https://softwareengineering.stackexchange.com/questions/200002/semantic-versioning-for-desktop-applications/357887#357887
 ## i.e. MAJOR.MINOR.PATCH
 ## MAJOR major changes to interface / installation process
@@ -297,6 +297,12 @@ class MOPSTModel(object):
         all_factors_opportunity_raster_summer_business = Raster(opportunity_raster) * 0
         all_factors_pressure_raster_summer_custodianship = Raster(pressure_raster) * 0
         all_factors_opportunity_raster_summer_custodianship = Raster(opportunity_raster) * 0
+        all_factors_pressure_raster_winter_profit = Raster(pressure_raster) * 0
+        all_factors_opportunity_raster_winter_profit = Raster(opportunity_raster) * 0
+        all_factors_pressure_raster_winter_business = Raster(pressure_raster) * 0
+        all_factors_opportunity_raster_winter_business = Raster(opportunity_raster) * 0
+        all_factors_pressure_raster_winter_custodianship = Raster(pressure_raster) * 0
+        all_factors_opportunity_raster_winter_custodianship = Raster(opportunity_raster) * 0
 		#process factor rasters
         factor_rasters = parameters[8].valueAsText #returns full path if selected through browse, filename if not. 
 		#split file path into separate objects (factors_split)
@@ -354,24 +360,42 @@ class MOPSTModel(object):
                             if row.getValue(field_scenario) == "Profit": #Profit scenario
                                 arcpy.AddMessage("...Profit Scenario")
 								##remember we need base weight as well as scenario weight
+								#summer
                                 factor_pressure_raster_summer_profit = factor_pressure_raster_summer * row.getValue("pressure-multiplier") 
                                 all_factors_pressure_raster_summer_profit = all_factors_pressure_raster_summer_profit + factor_pressure_raster_summer_profit
                                 factor_opportunity_raster_summer_profit = factor_opportunity_raster_summer * row.getValue("opportunity-multiplier")
                                 all_factors_opportunity_raster_summer_profit = all_factors_opportunity_raster_summer_profit + factor_opportunity_raster_summer_profit
+                                #winter
+                                factor_pressure_raster_winter_profit = factor_pressure_raster_winter * row.getValue("pressure-multiplier") 
+                                all_factors_pressure_raster_winter_profit = all_factors_pressure_raster_winter_profit + factor_pressure_raster_winter_profit
+                                factor_opportunity_raster_winter_profit = factor_opportunity_raster_winter * row.getValue("opportunity-multiplier")
+                                all_factors_opportunity_raster_winter_profit = all_factors_opportunity_raster_winter_profit + factor_opportunity_raster_winter_profit
                             if row.getValue(field_scenario) == "Business as usual": #Business as usual scenario
                                 arcpy.AddMessage("...Business as usual Scenario")
 								##remember we need base weight as well as scenario weight
+                                #summer
                                 factor_pressure_raster_summer_business = factor_pressure_raster_summer * row.getValue("pressure-multiplier") 
                                 all_factors_pressure_raster_summer_business = all_factors_pressure_raster_summer_business + factor_pressure_raster_summer_business
                                 factor_opportunity_raster_summer_business = factor_opportunity_raster_summer * row.getValue("opportunity-multiplier")
                                 all_factors_opportunity_raster_summer_business = all_factors_opportunity_raster_summer_business + factor_opportunity_raster_summer_business
+								#winter
+                                factor_pressure_raster_winter_business = factor_pressure_raster_winter * row.getValue("pressure-multiplier") 
+                                all_factors_pressure_raster_winter_business = all_factors_pressure_raster_winter_business + factor_pressure_raster_winter_business
+                                factor_opportunity_raster_winter_business = factor_opportunity_raster_winter * row.getValue("opportunity-multiplier")
+                                all_factors_opportunity_raster_winter_business = all_factors_opportunity_raster_winter_business + factor_opportunity_raster_winter_business
                             if row.getValue(field_scenario) == "Custodianship": #Custodianship scenario
                                 arcpy.AddMessage("...Custodianship Scenario")
 								##remember we need base weight as well as scenario weight
+								#summer
                                 factor_pressure_raster_summer_custodianship = factor_pressure_raster_summer * row.getValue("pressure-multiplier") 
                                 all_factors_pressure_raster_summer_custodianship = all_factors_pressure_raster_summer_custodianship + factor_pressure_raster_summer_custodianship
                                 factor_opportunity_raster_summer_custodianship = factor_opportunity_raster_summer * row.getValue("opportunity-multiplier")
                                 all_factors_opportunity_raster_summer_custodianship = all_factors_opportunity_raster_summer_custodianship + factor_opportunity_raster_summer_custodianship
+								#winter
+                                factor_pressure_raster_winter_custodianship = factor_pressure_raster_winter * row.getValue("pressure-multiplier") 
+                                all_factors_pressure_raster_winter_custodianship = all_factors_pressure_raster_winter_custodianship + factor_pressure_raster_winter_custodianship
+                                factor_opportunity_raster_winter_custodianship = factor_opportunity_raster_winter * row.getValue("opportunity-multiplier")
+                                all_factors_opportunity_raster_winter_custodianship = all_factors_opportunity_raster_winter_custodianship + factor_opportunity_raster_winter_custodianship
                     i += 1 #move counter to next factor
         #end of for loop
 		#save layers to geodatabase
@@ -380,12 +404,22 @@ class MOPSTModel(object):
         all_factors_pressure_raster_winter.save("baseline_pressure_raster_winter") 
         all_factors_opportunity_raster_winter.save("baseline_opportunity_raster_winter") 
         messages.addMessage(".Opportunity and pressure, winter and summer baseline rasters saved")		
+
         all_factors_pressure_raster_summer_profit.save("profit_pressure_raster_summer")
         all_factors_opportunity_raster_summer_profit.save("profit_opportunity_raster_summer")
+        all_factors_pressure_raster_winter_profit.save("profit_pressure_raster_winter")
+        all_factors_opportunity_raster_winter_profit.save("profit_opportunity_raster_winter")
+
         all_factors_pressure_raster_summer_business.save("business_pressure_raster_summer")
         all_factors_opportunity_raster_summer_business.save("business_opportunity_raster_summer")
+        all_factors_pressure_raster_winter_business.save("business_pressure_raster_winter")
+        all_factors_opportunity_raster_winter_business.save("business_opportunity_raster_winter")
+        
         all_factors_pressure_raster_summer_custodianship.save("custodianship_pressure_raster_summer")
         all_factors_opportunity_raster_summer_custodianship.save("custodianship_opportunity_raster_summer")
+        all_factors_pressure_raster_winter_custodianship.save("custodianship_pressure_raster_winter")
+        all_factors_opportunity_raster_winter_custodianship.save("custodianship_opportunity_raster_winter")
+		
         messages.addMessage(".Scenario rasters saved")				
 	
         return
