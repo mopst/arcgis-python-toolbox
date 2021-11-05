@@ -10,10 +10,9 @@ This has been tested on ArcMap 10.5 and should work on later versions of ArcMap 
 
 ### Video
 
-This video shows how to use the tool and the demo files. Step-by-step instructions are below. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U4L16ksAge4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+This [video](https://www.youtube.com/embed/U4L16ksAge4) shows how to use the tool and the demo files. Step-by-step instructions are below. 
+ 
+ 
 ### Step by step instructions
 
 - Download the [MOPST Python Toolbox](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/MOPST-ArcGIS-Python-Toolbox.pyt). Save this somewhere on your machine you can find it (e.g. Downloads). 
