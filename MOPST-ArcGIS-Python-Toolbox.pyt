@@ -1,5 +1,4 @@
 ## Version: 0.1.0
-## Date: 2021-11-05-A
 ## Versioning approach based on Semantic Versioning https://semver.org/ with adaptions as suggested here: https://softwareengineering.stackexchange.com/questions/200002/semantic-versioning-for-desktop-applications/357887#357887
 ## i.e. MAJOR.MINOR.PATCH
 ## MAJOR major changes to interface / installation process
@@ -15,17 +14,17 @@ class Toolbox(object):
     def __init__(self):
         """Define the toolbox (the name of the toolbox is the name of the
         .pyt file)."""
-        self.label = "BCHT Model"
-        self.alias = "BCHTModel"
+        self.label = "MOPST Model"
+        self.alias = "MOPSTModel"
 
         # List of tool classes associated with this toolbox
-        self.tools = [BCHTModel]
+        self.tools = [MOPSTModel]
 
 
-class BCHTModel(object):
+class MOPSTModel(object):
     def __init__(self):
         """Define the tool (tool name is the name of the class)."""
-        self.label = "BCHT Model"
+        self.label = "MOPST Model"
         self.description = "description (help file here)"
         self.canRunInBackground = False
 
