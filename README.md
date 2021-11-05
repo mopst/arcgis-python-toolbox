@@ -27,7 +27,7 @@ There is some demonstration data so you can test out the Toolbox on your compute
 - Check output log (sample in `demo.zip`). 
 - Look at model outputs in the default geodatabase (sample in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip)). 
 
-For more details, please look at the [Demonstration Files](demo.md) page. 
+For more details, please look at the [video](https://youtu.be/U4L16ksAge4) or the [Demonstration Files](demo.md) page. 
  
  
 ## Useful Information
