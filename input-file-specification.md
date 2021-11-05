@@ -1,26 +1,26 @@
 ## Input File Specification
 
-This toolbox makes use of a range of input files. The files in (demo) are in this required format. The requirements are detailed below.
+This toolbox makes use of a range of input files. The files in [demo.zip](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/demo.zip) are in this required format. The requirements are detailed below.
 
 - All files must cover the same geographic areas
 - All files must be in the same coordinate system 
 
 ### Land Cover (Shapefile)
-- *Example is X*
+- *Example is brighton-lewes-down-land-cover.shp*
 - This file contains the different land cover types. 
 - The column specifying the type of land cover must be called **Main_habit**. 
 - All land cover types must be present. 
 - It is recommended that the number of columns are kept to a minimum, as a number of other layers will be joined to this one, and the number of columns will increase significantly. 
 
 ### Land Cover Sensitivity (CSV File)
-- *Example is X*
+- *Example is land-cover-senstivity.csv*
 - All land covers must be listed.
 - If the land cover is not needed in the model, it must still be listed, and given a senstivity score of 1. 
 - The land cover column must be called **Habitat_environment_type**. 
 - There is a maximum length to the field name of the sensitivity score, so try and keep this as short as possible (e.g. no more than ~ 25 characters, e.g. **ND_North_Devon** or **BLD_Birghton_Lewes_Down** is fine). This is because during the joining process, the field names can get very long (and subsequently get cut off). 
 
 ### Seasonality Score (CSV File)
-- *Example is X*
+- *Example is seasonality.csv*
 - Contains information on which land cover types are more sensitive in summer or winter. 
 - All land covers must be listed.
 - The column specifying the type of land cover must be called **Habitat_environment_type**. 
@@ -30,21 +30,21 @@ This toolbox makes use of a range of input files. The files in (demo) are in thi
 - If null values are present, then these land cover types will be missing in the **summer_raster** and **winter_raster** outputs. 
 
 ### Pressure Raster Layer & Opportunity Raster Layer
-- *Example is X & Y*
+- *Example is bldbr-pressures-merged.tif & bldbr-opportunity-merged.tif*
 - These identify the stakeholder identification of areas of tourism pressure and opportunity. 
 - All rasters must be set to the same resolution and extent. 
 - They must have values of **1** (there is pressure/opportunity) or **0** (there is not pressure/opportunity). 
 - The pressure raster is used as a template (extent and resolution) for raster export of land cover for winter and summer. 
 
 ### Factor Weights (CSV File)
-- *Example is X*
+- *Example is factor-weights.csv*
 - This lists all of the Factor Raster Layers and the weights given to them for Pressure and Opportunity. 
 - **factor-file** column lists the file name (including extension). 
 - **pressure-weight** lists the pressure weight. 
 - **opportunity-weight** lists the opportunity weight. 
 
 ### Scenario Weights (CSV File)
-- *Example is X*
+- *Example is scenario-weights.csv*
 - This lists the three scenarios (Profit, Business as usual, Custodianship) and their weights
 - Structured with 4 columns (**scenario, factor-file, opportunity-multiplier, pressure-multiplier**)
 - Each factor layer (with multiplier) must be listed for each scenario. 
@@ -57,7 +57,7 @@ This toolbox makes use of a range of input files. The files in (demo) are in thi
 
 
 ### Factor Raster Layers
-- *Examples are in X*
+- *Examples are in factor-rasters
 - For ease, these are all stored within the **factor-rasters** sub-folder and can be added in using the browse tool or by selecting from the drop down list. 
 - Rasters must have a value of **1** where the object is present, and **0** where the object is not present. 
 - All rasters must have the same extent and resolution. 
