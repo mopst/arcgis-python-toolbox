@@ -21,7 +21,7 @@ There is some demonstration data so you can test out the Toolbox on your compute
 - Open the **Catalog** tab. 
 - **Connect To Folder** to the folder you downloaded the files. 
 - Open **MOPST-ArcGIS-Python-Toolbox.pyt** and double click **MOPST Model**. 
-- Set the input files, ![like this image](demo-MOPST-tool-inputs.png) 
+- Set the input files, [like this image](demo-MOPST-tool-inputs.png). 
 - Click **OK** to run the model.
 - Wait for model to run (about 5 minutes or so). 
 - Check output log (sample in `demo.zip`). 
