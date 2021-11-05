@@ -1,21 +1,16 @@
 # MOPST ArcGIS Python Toolbox
 
 Version of the MOPST (Mapping Opportunity & Pressures for Sustainable Tourism) tool for ArcGIS, running as a Python Toolbox. 
-
-
+ 
+ 
 ## Requirements
 
-This needs ArcMap 10.5 or greater to run, with the Spatial Analyst extension. *It will not work on ArcGIS Pro.*
+This needs **ArcMap 10.5** or greater to run, with the **Spatial Analyst extension**. *It will not work on ArcGIS Pro.*
 
 This has been tested on ArcMap 10.5 and should work on later versions of ArcMap (it has also been tested on 10.8.1). It may also work on earlier versions of ArcMap (10.x) but this has not been tested. *Please let us know if it works for you*. Basic, Standard and Advanced licenses should all work. 
-
-## Useful Information
-
-This script makes use of the Default File Geodatabase in ArcMap to save working files and outputs. This is usually in C:\Users\<username>\Documents\ArcGIS\Default.gdb. You can adjust this when opening a new Map Document, or via File > Map Document Properties > Default Geodatabase. 
-
-It is helpful if all the layers needed for the tool (apart from raster factors) are added to the Map Document before running the script. 
-
-## Setup & Demo Data
+ 
+  
+## Quick Setup & Demo Data
 
 There is some demonstration data so you can test out the Toolbox on your computer. 
 
@@ -26,16 +21,22 @@ There is some demonstration data so you can test out the Toolbox on your compute
 - Open the **Catalog** tab. 
 - **Connect To Folder** to the folder you downloaded the files. 
 - Open **MOPST-ArcGIS-Python-Toolbox.pyt** and double click **MOPST Model**. 
-- Set the input files, (like this image)[demo-MOPST-tool-inputs.png]
+- Set the input files, ![like this image](demo-MOPST-tool-inputs.png) 
 - Click **OK** to run the model.
-- Wait for model to run *(about 5 minutes or so)*. 
+- Wait for model to run (about 5 minutes or so). 
 - Check output log (sample in `demo.zip`). 
 - Look at model outputs in the default geodatabase (sample in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip)). 
 
 For more details, please look at the [Demonstration Files](demo.md) page. 
+ 
+ 
+## Useful Information
 
+This script makes use of the Default File Geodatabase in ArcMap to save working files and outputs. This is usually in C:\Users\<username>\Documents\ArcGIS\Default.gdb. You can adjust this when opening a new Map Document, or via File > Map Document Properties > Default Geodatabase. 
 
-
+It is helpful if all the layers needed for the tool (apart from raster factors) are added to the Map Document before running the script. 
+  
+  
 ## Input File Specification
 
 This toolbox makes use of a range of input files. The files in (demo) are in this required format. The requirements are summarised below. See [input-file-specification](input-file-specification.md) for more details. 
@@ -53,8 +54,8 @@ Opportunity Raster Layer (Raster TIF) | *bldbr-opportunity-merged.tif* | identif
 Factor Weights (CSV File) | *seasonality.csv* | Lists all of the Factor Raster Layers and the weights given to them for Pressure and Opportunity.
 Scenario Weights (CSV File) | *scenario-weights.csv* | lists the three scenarios (Profit, Business as usual, Custodianship) and their weights. 
 Factor Raster Layers (Raster TIF) | *factor-rasters* | show the presence (**1**) or absence (**0**) of a range of factors. 
-
-
+  
+ 
 ## Output Files:
 
 The exported files (total number = 24) are stored in the default Geodatabase (usually in C:\Users\<username>\Documents\ArcGIS\Default.gdb). They are:
@@ -87,3 +88,10 @@ summer_landcover_raster | Working file |
 winter_landcover_raster | Working file | 
 
 They are available in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip). 
+ 
+
+## Comments / Feedback
+
+Please do let me know if you have any comments / feedback, via email: [nick@geospatialtrainingsolutions.co.uk](mailto:nick@geospatialtrainingsolutions.co.uk), or please submit a Pull Request on GitHub. 
+ 
+ 

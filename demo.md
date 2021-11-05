@@ -47,7 +47,7 @@ The `factor-rasters` folder contains 9 example factors. These are all created us
 
 - Set the input files, the toolbox should look like this:
 
-!()[demo-MOPST-tool-inputs.png]
+![demo-MOPST-tool-inputs.png]()
 
 - Click **OK** to run the model.
 
