@@ -21,7 +21,7 @@ This [video](https://www.youtube.com/embed/U4L16ksAge4) shows how to use the too
 
 - Open the `demo.mxd` file in ArcMap. 
 
-- Set the Default Geodatabase (**File > Map Document Properties**). This is where the output files will be saved. 
+- Set the Default Geodatabase (**File > Map Document Properties**). This is where the output files will be saved. *This can be a File Geodatabase or a Personal Geodatabase.*
 
 - Use the **Catalog** tab to have a look at the files provided. 
 
@@ -57,7 +57,7 @@ These data took 5 minutes 5 seconds to run on my machine. Your computer might be
 
 - Check the output log *(it should look like the sample log `example-output-log.txt` in `demo.zip`)*. 
 
-- Look at model outputs in the default geodatabase *(they should look like the sample files in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip))*. 
+- Look at model outputs in the default geodatabase *(they should look like the sample files in [`output-geodatabase.gdb.zip`](https://github.com/mopst/arcgis-python-toolbox/releases/download/v1.0.0/output-geodatabase.gdb.zip))*. If they don't appear stright away, right click on the geodatabase and choose **Refresh**. 
 
 Outputs are listed in `output-geodatabase`, there should be 24 layers (see [README](readme.md) for details of the files). 
 
