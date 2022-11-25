@@ -48,7 +48,7 @@ Name (Format) | Example Filename | Description
 -- | -- | -- 
 Land Cover (Shapefile) | *brighton-lewes-down-land-cover.shp* | Shapefile of the different land cover types. 
 Land Cover Sensitivity (CSV File) | *land-cover-sensitivity.csv* | Sensitivity score for each land cover type.
-Seasonality Score (CSV File) | seasonality.csv | Contains information on which land cover types are more sensitive in summer or winter. 
+Seasonality Score (CSV File) | *seasonality.csv* | Contains information on which land cover types are more sensitive in summer or winter. 
 Pressure Raster Layer (Raster TIF) | *bldbr-pressures-merged.tif* | Identify the stakeholder identification of areas of tourism pressure. 
 Opportunity Raster Layer (Raster TIF) | *bldbr-opportunity-merged.tif* | identify the stakeholder identification of areas of tourism opportunity. 
 Factor Weights (CSV File) | *seasonality.csv* | Lists all of the Factor Raster Layers and the weights given to them for Pressure and Opportunity.
